@@ -1,0 +1,94 @@
+index.html:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <div class="input-group">
+            <input type="number" id="celsiusInput" placeholder="Enter Celsius">
+            <button onclick="convertToCelsius()">Convert to Fahrenheit</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+styles.css:
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.input-group {
+    margin: 20px 0;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 70%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+script.js:
+
+
+function convertToCelsius() {
+    const celsiusInput = document.getElementById("celsiusInput").value;
+    
+    if (celsiusInput === "") {
+        alert("Please enter a valid temperature in Celsius.");
+        return;
+    }
+
+    const celsius = parseFloat(celsiusInput);
+    const fahrenheit = (celsius * 9/5) + 32;
+
+    document.getElementById("result").innerHTML = `${celsius} Celsius is ${fahrenheit.toFixed(2)} Fahrenheit`;
+}
+
