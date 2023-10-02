@@ -20,17 +20,6 @@ You can try out the Temperature Converter by visiting the [live demo](#) (Replac
 - Simple and user-friendly interface.
 - Responsive design for use on various devices.
 
-## Getting Started
-
-To get a local copy of this project up and running, follow these steps:
-
-1. Clone this repository:
-
-
-2. Navigate to the project directory:
-
-
-3. Open `index.html` in your web browser to use the Temperature Converter locally.
 
 ## Usage
 
